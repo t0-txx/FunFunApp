@@ -1,6 +1,6 @@
 ﻿namespace FunFunApp
 {
-    partial class Picture
+    partial class MovePicture
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Picture));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovePicture));
             pictureBox1 = new PictureBox();
-            button1 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -40,37 +39,26 @@
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(223, 60);
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(392, 273);
+            pictureBox1.Size = new Size(200, 130);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
+            pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(223, 352);
-            button1.Name = "button1";
-            button1.Size = new Size(392, 52);
-            button1.TabIndex = 1;
-            button1.Text = "Start";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // timer1
             // 
             timer1.Interval = 1;
             timer1.Tick += timer1_Tick;
             // 
-            // Picture
+            // MovePicture
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 465);
-            Controls.Add(button1);
+            ClientSize = new Size(784, 411);
             Controls.Add(pictureBox1);
-            Name = "Picture";
-            Text = "Picture";
+            Name = "MovePicture";
+            Text = "MovePicture";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -78,7 +66,6 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
         private System.Windows.Forms.Timer timer1;
     }
 }

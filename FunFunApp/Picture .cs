@@ -29,7 +29,7 @@ namespace FunFunApp
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
             pictureBox1.Image = System.Drawing.Image.FromFile("F:\\รูป\\" + imagList[count]);
             count++;
             if (imagList.Length == count)
