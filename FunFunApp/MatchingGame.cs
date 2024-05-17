@@ -144,7 +144,7 @@ namespace FunFunApp
             // any unmatched icons
             // That means the user won. Show a message and close the form
             timer2.Stop();
-            MessageBox.Show("You matched all the icons!\ntime = " + count + 1, "Congratulations" );
+            MessageBox.Show("You matched all the icons!\ntime = " + (count+1), "Congratulations" );
 
             Close();
         }
