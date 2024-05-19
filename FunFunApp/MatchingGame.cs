@@ -171,6 +171,7 @@ namespace FunFunApp
             {
                 timer2.Stop();
                 MessageBox.Show("แพ้");
+                Close();
             }
         }
     }
