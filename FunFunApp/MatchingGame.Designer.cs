@@ -288,13 +288,13 @@
             // 
             // label17
             // 
-            label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(566, 269);
+            label17.Location = new Point(552, 256);
             label17.Name = "label17";
-            label17.Size = new Size(111, 86);
+            label17.Size = new Size(140, 125);
             label17.TabIndex = 1;
             label17.Text = "60";
+            label17.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // timer2
             // 
