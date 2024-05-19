@@ -49,6 +49,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             label17 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
+            label18 = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -289,7 +290,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(566, 142);
+            label17.Location = new Point(566, 269);
             label17.Name = "label17";
             label17.Size = new Size(111, 86);
             label17.TabIndex = 1;
@@ -300,11 +301,22 @@
             timer2.Interval = 1000;
             timer2.Tick += timer2_Tick_1;
             // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.Location = new Point(552, 159);
+            label18.Name = "label18";
+            label18.Size = new Size(140, 65);
+            label18.TabIndex = 2;
+            label18.Text = "Time";
+            // 
             // MatchingGame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(704, 511);
+            Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(tableLayoutPanel1);
             Name = "MatchingGame";
@@ -336,5 +348,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label label17;
         private System.Windows.Forms.Timer timer2;
+        private Label label18;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FunFunApp
 {
-    public partial class MatchingGame : Form
+    public partial class MatchingGameSix : Form
     {
         int count = 60;
 
@@ -22,8 +22,12 @@ namespace FunFunApp
         // and each icon appears twice in this list
         List<string> icons = new List<string>()
         {
-            "!", "!", "N", "N", ",", ",", "k", "k",
-            "b", "b", "v", "v", "w", "w", "z", "z"
+            "!", "!", "N", "N", ",", ",",
+            "k", "k", "b", "b", "v", "v",
+            "f", "f", "F", "F", "C", "C",
+            "h", "h", "j", "j", "l", "l",
+            "J", "J", "H", "H", "L", "L",
+            "P", "P", "V", "V", "M", "M"
         };
 
         /// <summary>
@@ -58,7 +62,7 @@ namespace FunFunApp
         // that the player clicks
         Label secondClicked = null;
 
-        public MatchingGame()
+        public MatchingGameSix()
         {
             InitializeComponent();
             timer2.Start();
@@ -163,15 +167,17 @@ namespace FunFunApp
             secondClicked = null;
         }
 
-        private void timer2_Tick_1(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            label17.Text = count.ToString();
+            lb2.Text = count.ToString();
             count--;
             if (count == -1)
             {
                 timer2.Stop();
                 MessageBox.Show("แพ้");
+                Close();
             }
+
         }
     }
 }
