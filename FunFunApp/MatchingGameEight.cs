@@ -123,10 +123,6 @@ namespace FunFunApp
                     secondClicked = null;
                     return;
                 }
-                else
-                {
-                    SoundPlayer player = new SoundPlayer("F:\\รูป\\SoundFalse.mp3");
-                }
 
                 // If the player gets this far, the player 
                 // clicked two different icons, so start the 

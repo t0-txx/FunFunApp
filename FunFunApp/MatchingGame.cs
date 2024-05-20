@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -111,7 +112,14 @@ namespace FunFunApp
                 {
                     firstClicked = null;
                     secondClicked = null;
+                    SoundPlayer player = new SoundPlayer("F:\\รูป\\SoundTrue.wav");
+                    player.Play();
                     return;
+                }
+                else
+                {
+                    SoundPlayer player = new SoundPlayer("F:\\รูป\\SoundFalse.wav");
+                    player.Play();
                 }
 
                 // If the player gets this far, the player 
@@ -140,6 +148,8 @@ namespace FunFunApp
             // If the loop didn’t return, it didn't find
             // any unmatched icons
             // That means the user won. Show a message and close the form
+            SoundPlayer player = new SoundPlayer("F:\\รูป\\SoundTrue.wav");
+            player.Play();
             timer2.Stop();
             MessageBox.Show("You matched all the icons!\ntime = " + (count + 1), "Congratulations");
 
