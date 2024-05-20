@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="DemoProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MatchingGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MatchingGameEight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MatchingGameSix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MovePicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Picture .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TimeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

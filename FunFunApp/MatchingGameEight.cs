@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FunFunApp
 {
-    public partial class MatchingGame : Form
+    public partial class MatchingGameEight : Form
     {
         int count = 60;
 
@@ -22,8 +24,15 @@ namespace FunFunApp
         // and each icon appears twice in this list
         List<string> icons = new List<string>()
         {
+
             "!", "!", "N", "N", ",", ",", "k", "k",
-            "b", "b", "v", "v", "w", "w", "z", "z"
+            "b", "b", "v", "v", "f", "f", "F", "F",
+            "C", "C", "h", "h", "j", "j", "l", "l",
+            "J", "J", "H", "H", "L", "L", "P", "P",
+            "V", "V", "M", "M", "O", "O", "o", "o",
+            "g", "g", "G", "G", "z", "z", "Z", "Z",
+            "x", "x", "X", "X", "c", "c", "B", "B",
+            "p", "p", "y", "y", "Y", "Y", "R", "R"
         };
 
         /// <summary>
@@ -58,9 +67,10 @@ namespace FunFunApp
         // that the player clicks
         Label secondClicked = null;
 
-        public MatchingGame()
+        public MatchingGameEight()
         {
             InitializeComponent();
+            timer2.Start();
             AssignIconsToSquares();
         }
 
@@ -113,6 +123,10 @@ namespace FunFunApp
                     secondClicked = null;
                     return;
                 }
+                else
+                {
+                    SoundPlayer player = new SoundPlayer("F:\\รูป\\SoundFalse.mp3");
+                }
 
                 // If the player gets this far, the player 
                 // clicked two different icons, so start the 
@@ -162,9 +176,9 @@ namespace FunFunApp
             secondClicked = null;
         }
 
-        private void timer2_Tick_1(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            label17.Text = count.ToString();
+            lb2.Text = count.ToString();
             count--;
             if (count == -1)
             {
@@ -172,19 +186,6 @@ namespace FunFunApp
                 MessageBox.Show("แพ้");
                 Close();
             }
-            progressBar1.PerformStep();
-            if (progressBar1.Value == 0)
-            {
-                timer1.Stop();
-                MessageBox.Show("แพ้");
-                Close();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            timer2.Start();
-            progressBar1.Step = -1;
         }
     }
 }

@@ -177,7 +177,6 @@ namespace FunFunApp
                 MessageBox.Show("แพ้");
                 Close();
             }
-
         }
     }
 }

@@ -50,6 +50,8 @@
             label17 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
             label18 = new Label();
+            progressBar1 = new ProgressBar();
+            button1 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -289,7 +291,7 @@
             // label17
             // 
             label17.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(552, 256);
+            label17.Location = new Point(552, 226);
             label17.Name = "label17";
             label17.Size = new Size(140, 125);
             label17.TabIndex = 1;
@@ -305,17 +307,44 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label18.Location = new Point(552, 159);
+            label18.Location = new Point(552, 129);
             label18.Name = "label18";
             label18.Size = new Size(140, 65);
             label18.TabIndex = 2;
             label18.Text = "Time";
+            label18.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // progressBar1
+            // 
+            progressBar1.ForeColor = Color.OrangeRed;
+            progressBar1.Location = new Point(552, 54);
+            progressBar1.MarqueeAnimationSpeed = 60;
+            progressBar1.Maximum = 60;
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(140, 34);
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.TabIndex = 3;
+            progressBar1.Value = 60;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.YellowGreen;
+            button1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(552, 383);
+            button1.Name = "button1";
+            button1.Size = new Size(140, 128);
+            button1.TabIndex = 4;
+            button1.Text = "Start";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // MatchingGame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(704, 511);
+            Controls.Add(button1);
+            Controls.Add(progressBar1);
             Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(tableLayoutPanel1);
@@ -349,5 +378,7 @@
         private Label label17;
         private System.Windows.Forms.Timer timer2;
         private Label label18;
+        private ProgressBar progressBar1;
+        private Button button1;
     }
 }
